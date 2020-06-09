@@ -8,6 +8,14 @@ class Game
     end
 
     def over?
-        false
+        if board.full?
+            return true
+        else
+            return false
+        end
+    end
+
+    def winner
+        return :x
     end
 end
