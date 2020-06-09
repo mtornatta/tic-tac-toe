@@ -1,6 +1,9 @@
 require_relative 'board'
 
 class Game
-    def init()
+
+    @board = Board.new
+
+    def initialize
     end
 end
