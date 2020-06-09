@@ -26,6 +26,10 @@ class Game
             bottom: {left: :x, middle: nil, right: nil}
           }
             return :o
+        elsif board.full?
+            return :is_tie
+        else
+            return nil
         end
     end
 end
