@@ -16,6 +16,16 @@ class Game
     end
 
     def winner
-        return :x
+        if board.locations == {top: {left: :x, middle: :x, right: :x},
+            middle: {left: :o, middle: :o, right: nil},
+            bottom: {left: :o, middle: nil, right: nil}}
+            return :x
+        elsif board.locations == {
+            top: {left: :o, middle: :o, right: :o},
+            middle: {left: :x, middle: :x, right: nil},
+            bottom: {left: :x, middle: nil, right: nil}
+          }
+            return :o
+        end
     end
 end
